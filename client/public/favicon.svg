@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="JVidros">
+  <rect width="64" height="64" rx="8" fill="#F5F9FC"/>
+  <path d="M13 10h15v31c0 7-5 12-12 12H13V10Z" fill="none" stroke="#1F2B36" stroke-width="4"/>
+  <path d="M37 10h14v43H37V10Z" fill="none" stroke="#1F2B36" stroke-width="4"/>
+  <path d="M45 14v28" stroke="#D8A24A" stroke-width="4"/>
+</svg>

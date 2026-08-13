@@ -1,0 +1,34 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [],
+  "dev_command": "pnpm run dev",
+  "env_vars": {},
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "https://7f0548f6b28a1758d9bf7be630d36cb4.artifacts.cloudflare.net/git/prod/SCtFZNsMrgAsgbNnvGzoQr.git",
+    "expiration": "2026-08-14T10:17:51.758Z",
+    "token": "art_v2_x_8679a7b09af85f7ed046a3889191102e57a9ecaa?expires=1786702671",
+    "backend": "GIT_BACKEND_ARTIFACTS"
+  },
+  "name": "jvidros-catalogo",
+  "path": "/home/ubuntu/jvidros-catalogo",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "ihViApUTNNwEh9bWfUq9iN",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "TP94QfHNYspDJsZfHPUYRR",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Marilson Nascimento",
+    "OWNER_OPEN_ID": "NfKrFrZdedtg86aGytNDAY",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "fe582f30-0b44-4a66-a614-7c30c81e7cf2",
+    "VITE_APP_ID": "SCtFZNsMrgAsgbNnvGzoQr",
+    "VITE_APP_LOGO": "",
+    "VITE_APP_TITLE": "JVidros — Vidraçaria e Projetos em Vidro",
+    "VITE_FRONTEND_FORGE_API_KEY": "XZNd6NZ3uCyjFVgsFwujTQ",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}

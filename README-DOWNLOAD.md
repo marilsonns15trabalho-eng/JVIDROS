@@ -1,28 +1,69 @@
-# JVidros — pacote do site
+# JVidros — Site oficial
 
-Este pacote contém o código-fonte completo do catálogo responsivo da JVidros, desenvolvido em React + Vite + Tailwind CSS.
+Catálogo digital da JVidros — vidraçaria especializada em projetos em vidro sob medida.
+
+## Tecnologias
+
+- React 19 + TypeScript
+- Vite 7
+- Tailwind CSS 4
+- Wouter (rotas)
+- Lucide (ícones)
 
 ## Como executar localmente
 
-Use Node.js 18 ou superior. Na pasta do projeto, execute:
-
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
-Para gerar uma versão de produção:
+Para gerar a versão de produção:
 
 ```bash
-pnpm build
-pnpm preview
+npm run build
+npm run preview
 ```
 
-## Personalizações pendentes
+## Variáveis de ambiente
 
-O botão de orçamento usa uma mensagem pronta do WhatsApp, mas está sem número de destino porque o telefone da empresa ainda não foi informado. Para conectar diretamente, abra `client/src/pages/Home.tsx` e substitua a variável `whatsappLink` por um endereço no formato `https://wa.me/55DDDNUMERO?text=...`.
+Copie `.env.example` para `.env` e ajuste:
 
-As imagens do site usam URLs persistentes do armazenamento do projeto, já configuradas no código. Elas foram produzidas para a direção azul, branca e grafite aprovada, com apartamentos, sacadas, banheiro urbano e fachada comercial. Para usar fotografias reais da JVidros, substitua os valores de `image` no array `projects` e o `src` do hero.
+| Variável | Descrição |
+|---|---|
+| `VITE_WHATSAPP_NUMBER` | Número do WhatsApp no formato `55DDDNUMERO` (apenas dígitos) |
+| `VITE_SITE_URL` | URL pública do site (usada para SEO/canonical) |
+
+> O número de WhatsApp já possui fallback no código (`5571986110762`), então o site funciona mesmo sem `.env`.
+
+## Chatbot Inteligente (100% Offline)
+
+O site possui um chatbot flutuante **100% offline** que responde dúvidas dos visitantes com base em um banco de conhecimento local. Não requer API externa, não tem custos adicionais e funciona instantaneamente.
+
+- **Banco de conhecimento**: `client/src/data/knowledgeBase.ts`
+- **Lógica do bot**: `client/src/hooks/useChatBot.ts`
+- **Componentes**: `ChatBot.tsx`, `ChatButton.tsx`, `ChatMessage.tsx`
+- **Estilos**: `client/src/components/ChatBot.css`
+
+### Funcionalidades
+
+- Responde saudações e conversa cotidiana (olá, bom dia, obrigado, tchau)
+- Conhece todos os serviços da JVidros (box, sacada, portas, divisórias, espelhos)
+- Informa contato, endereço, horário e redes sociais
+- Explica garantia, prazos e tipos de vidro
+- Identifica intenção de orçamento e encaminha para o WhatsApp
+- Quando não sabe responder, encaminha automaticamente para o WhatsApp com link pré-preenchido
+
+## Deploy no Vercel
+
+1. Suba o projeto para um repositório no GitHub.
+2. No Vercel, importe o repositório.
+3. O framework será detectado automaticamente como **Vite**.
+4. Configure as variáveis de ambiente no painel da Vercel:
+   - `VITE_WHATSAPP_NUMBER=5571986110762`
+   - `VITE_SITE_URL=https://seu-dominio.vercel.app`
+5. Deploy.
+
+O arquivo `vercel.json` já está configurado com rewrites para SPA.
 
 ## Estrutura principal
 
@@ -30,8 +71,13 @@ As imagens do site usam URLs persistentes do armazenamento do projeto, já confi
 |---|---|
 | `client/src/pages/Home.tsx` | Conteúdo e estrutura da página principal |
 | `client/src/index.css` | Identidade visual, layout e responsividade |
-| `client/index.html` | SEO básico, fontes e metadados sociais |
+| `client/index.html` | SEO, fontes e metadados sociais |
+| `client/public/` | Imagens, favicon, robots.txt e sitemap.xml |
+| `client/src/data/knowledgeBase.ts` | Banco de conhecimento do chatbot offline |
+| `client/src/hooks/useChatBot.ts` | Lógica do chatbot offline |
 | `ideas.md` | Direção de design e decisões de marca |
-| `todo.md` | Checklist da última revisão |
 
-O pacote inclui também os arquivos de configuração, componentes de interface e scripts necessários para desenvolvimento e build.
+## Contato
+
+- WhatsApp: (71) 98611-0762
+- Instagram: [@julivanio](https://www.instagram.com/julivanio/)
